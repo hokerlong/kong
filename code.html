@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript">
+        function get_code()
+        {
+            var text = $("#content").val();
+            var re = /(\w|\d){4,6}-(\w|\d){4,6}-(\w|\d){4,6}/gi;
+            var codes = text.match(re);
+            $("#code").val(codes.join("\n"));
+
+        }
+        </script>
+    </head>
+    <body>
+        <textarea id="content" style="width: 500px; height: 500px;"></textarea>
+        <button onClick="get_code();">&gt&gt&gt</button>
+        <textarea id="code" style="width: 130px; height: 500px; font-family: monospace;"></textarea>
+    </body>
+</html>
